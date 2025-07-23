@@ -1,0 +1,22 @@
+<button [routerLink]="['/jobs']"> Back </button>
+@if(jobDetail()){
+  <div><img class="images" ngSrc="{{jobDetail()?.companyLogo}}" width="100" height="100" alt="company logo"/></div>
+  <h1>{{jobDetail()?.title}}</h1>
+  <div [innerHTML]="jobDetail()?.types"></div>
+  <div [innerHTML]="jobDetail()?.industries"></div>
+
+  <div>Company: {{jobDetail()?.companyName}}</div>
+
+  <div>Publish date: {{ jobDetail()?.publishDate | date:'M/dd/YYYY'}}</div>
+  <div>Location: {{jobDetail()?.location}}</div>
+  <div>Reference: {{jobDetail()?.reference}}</div>
+  <div>Description:
+    <div [innerHTML]="jobDetail()?.description">{{jobDetail()?.description}}</div>
+  </div>
+} @else {
+  No job details available.
+}
+
+
+
+

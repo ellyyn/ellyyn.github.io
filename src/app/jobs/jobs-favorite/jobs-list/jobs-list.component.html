@@ -1,0 +1,10 @@
+@if (!jobs().length) {
+  No job available.
+}
+@for (job of jobs(); track job.id) {
+  <app-job [job]="job"></app-job>
+  <button class="icon-star" [class.active]="job.favorite"
+        id="star-{{job.id}}" (click)="onToggleFavorite(job)"></button>
+}
+
+
