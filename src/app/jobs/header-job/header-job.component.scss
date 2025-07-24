@@ -1,0 +1,22 @@
+.title {
+  text-align:center;
+  padding-top: 1rem;
+}
+
+.center-buttons {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+a.button-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 40%;
+  max-width: 25rem;
+  height: 2rem;
+}

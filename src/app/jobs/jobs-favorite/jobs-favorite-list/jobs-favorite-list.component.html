@@ -1,0 +1,7 @@
+<div class="jobs-display">
+    @for (job of favoriteJobs(); track job.id) {
+      <app-job [job]="job"></app-job>
+    } @empty {
+        <div class="text-center">No favorites selected.</div>
+    }
+</div>
