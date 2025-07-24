@@ -7,7 +7,7 @@ import {HeaderJobComponent} from "src/app/jobs/header-job/header-job.component";
   standalone: true,
   imports: [RouterOutlet, HeaderJobComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'ng-job-search';

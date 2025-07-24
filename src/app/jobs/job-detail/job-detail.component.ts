@@ -14,7 +14,7 @@ import {JobApiService} from "src/app/jobs/service/job-api.service";
     DatePipe
   ],
   templateUrl: './job-detail.component.html',
-  styleUrl: './job-detail.component.css'
+  styleUrl: './job-detail.component.scss'
 })
 export class JobDetailComponent {
   private readonly jobsApiService = inject(JobApiService);

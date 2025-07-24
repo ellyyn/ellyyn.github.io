@@ -9,7 +9,7 @@ import {JobFavoriteService} from "src/app/jobs/jobs-favorite/service/job-favorit
     JobComponent
   ],
   templateUrl: './jobs-favorite-list.component.html',
-  styleUrl: './jobs-favorite-list.component.css'
+  styleUrl: './jobs-favorite-list.component.scss'
 })
 export class JobsFavoriteListComponent {
   private readonly jobsService = inject(JobFavoriteService);

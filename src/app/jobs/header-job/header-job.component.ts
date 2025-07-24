@@ -8,7 +8,7 @@ import {RouterLink} from "@angular/router";
     RouterLink
   ],
   templateUrl: './header-job.component.html',
-  styleUrl: './header-job.component.css'
+  styleUrl: './header-job.component.scss'
 })
 export class HeaderJobComponent {
 

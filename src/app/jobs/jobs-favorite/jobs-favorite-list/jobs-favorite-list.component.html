@@ -1,6 +1,7 @@
-@if (!favoriteJobs().length) {
-  No favorites selected.
-}
-@for (job of favoriteJobs(); track job.id) {
-  <app-job [job]="job"></app-job>
-}
+<div class="jobs-display">
+    @for (job of favoriteJobs(); track job.id) {
+      <app-job [job]="job"></app-job>
+    } @empty {
+        No favorites selected.
+    }
+</div>

@@ -1,5 +1,5 @@
 import {NgOptimizedImage} from "@angular/common";
-import {Component, input, InputSignal} from '@angular/core';
+import {Component, input} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {Job} from "src/app/jobs/model/job.model";
 
@@ -11,8 +11,8 @@ import {Job} from "src/app/jobs/model/job.model";
     RouterLink
   ],
   templateUrl: './job.component.html',
-  styleUrl: './job.component.css'
+  styleUrl: './job.component.scss'
 })
 export class JobComponent {
-  job: InputSignal<Job> = input.required();
+  job = input.required<Job>();
 }

@@ -22,7 +22,7 @@ export class JobFavoriteService {
   jobsWithFavorite = computed(() =>
     this.jobs().map((job) =>
       {
-        const isFavorite = this.favoriteIdJobs().filter(jobId => jobId === job.id).length > 0;
+        const isFavorite = this.favoriteIdJobs().includes(job.id);
         return this.mapJobWithFavorite(job, isFavorite);
       })
   );

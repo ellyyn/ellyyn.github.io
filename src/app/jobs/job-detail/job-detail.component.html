@@ -1,22 +1,27 @@
-<button [routerLink]="['/jobs']"> Back </button>
-@if(jobDetail()){
-  <div><img class="images" ngSrc="{{jobDetail()?.companyLogo}}" width="100" height="100" alt="company logo"/></div>
-  <h1>{{jobDetail()?.title}}</h1>
-  <div [innerHTML]="jobDetail()?.types"></div>
-  <div [innerHTML]="jobDetail()?.industries"></div>
+<div class="jobs-display">
+    <a class="button button-return" [routerLink]="['/jobs']">
+        ← Back </a>
+@if(jobDetail(); as jobDetail) {
+    <div class="row">
+      <div class="col-1 pad"><img class="images" [ngSrc]="jobDetail.companyLogo" width="100" height="100" alt="company logo"/></div>
+      <div class="col-11">
+          <div class="title pad" >{{jobDetail.title}}</div>
+          <div>Types: <span [innerHTML]="jobDetail.types"></span></div>
+          <div>Industries: <span [innerHTML]="jobDetail.industries"></span></div>
+      </div>
+    </div>
+  <div>Company: {{jobDetail.companyName}}</div>
 
-  <div>Company: {{jobDetail()?.companyName}}</div>
-
-  <div>Publish date: {{ jobDetail()?.publishDate | date:'M/dd/YYYY'}}</div>
-  <div>Location: {{jobDetail()?.location}}</div>
-  <div>Reference: {{jobDetail()?.reference}}</div>
+  <div>Publish date: {{ jobDetail.publishDate | date:'M/dd/YYYY'}}</div>
+  <div>Location: {{jobDetail.location}}</div>
+  <div>Reference: {{jobDetail.reference}}</div>
   <div>Description:
-    <div [innerHTML]="jobDetail()?.description">{{jobDetail()?.description}}</div>
+    <div [innerHTML]="jobDetail.description">{{jobDetail.description}}</div>
   </div>
 } @else {
-  No job details available.
+  No details available for this job.
 }
-
+</div>
 
 
 
