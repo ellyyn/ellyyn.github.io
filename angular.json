@@ -32,7 +32,11 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/Certif2JobSearch",
+              "outputPath": {
+                "base": "/docs",
+                "browser": ""
+              },
+              "baseHref": "/Certif2JobSearch/",
               "budgets": [
                 {
                   "type": "initial",
