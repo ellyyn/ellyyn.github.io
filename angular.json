@@ -32,6 +32,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Certif2JobSearch",
               "budgets": [
                 {
                   "type": "initial",
